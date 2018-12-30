@@ -18,8 +18,16 @@ d = np.array([[0]])
 
 sys = ctrl.StateSpace(a, b, c, d)
 
-T, yout, xout = ctrl.forced_response(sys,T,u,x0)
-
+plt.close()
 ctrl.bode_plot(sys)
+ctrl.root_locus(sys,PrintGain=True,grid=True)
+plt.figure()
+ctrl.nyquist_plot(sys)
+plt.title("Nyquist Plot")
+plt.grid()
+
+T, yout, xout = ctrl.forced_response(sys,T,u,x0)
+plt.figure()
 plt.plot(T,yout,T,u)
 plt.show()
+
