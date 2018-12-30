@@ -20,5 +20,5 @@ sys = ctrl.StateSpace(a, b, c, d)
 
 T, yout, xout = ctrl.forced_response(sys,T,u,x0)
 
-plt.plot(T,yout,T,u1)
+plt.plot(T,yout,T,u)
 plt.show()
