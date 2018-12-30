@@ -1,1 +1,1 @@
-This is a test README file.git
+This is a test README file
